@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2021-05-29)
+
+
+### Bug Fixes
+
+* add .npmrc ([ae60eea](https://github.com/sillabe/sillabe/commit/ae60eea439749207f7adb2e141cdd0d135ff628e))
+
+
+
+
+
 ## 0.1.2 (2021-05-29)
 
 **Note:** Version bump only for package @sillabe/core
