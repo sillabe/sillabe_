@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+      - next
+
+jobs:
+  test_build:
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    name: Test and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn config set workspaces-experimental true
+      - run: yarn install
+      - run: yarn lint
+      - run: yarn pretty
+      - run: yarn test
+      - run: yarn build

@@ -1,0 +1,51 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main
+      - next
+
+jobs:
+  test_build:
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    name: Test and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn config set workspaces-experimental true
+      - run: yarn install
+      - run: yarn lint
+      - run: yarn pretty
+      - run: yarn test
+
+  release:
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      COMMITTER_NAME: ${{ secrets.COMMITTER_NAME }}
+      COMMITTER_EMAIL: ${{ secrets.COMMITTER_EMAIL }}
+    needs: test_build
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: |
+          git config --global user.name "${COMMITTER_NAME}"
+          git config --global user.email "${COMMITTER_EMAIL}"
+      - run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: yarn config set workspaces-experimental true
+      - run: yarn install
+      - run: yarn build
+      - run: yarn release
+        if: github.ref == 'refs/heads/main'
+      - run: yarn release:next
+        if: github.ref == 'refs/heads/next'
