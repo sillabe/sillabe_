@@ -1,6 +1,6 @@
 {
     "name": "@sillabe/core",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "main": "dist/sillabe.cjs.js",
     "module": "dist/sillabe.es5.js",
     "typings": "dist/types/index.d.ts",
