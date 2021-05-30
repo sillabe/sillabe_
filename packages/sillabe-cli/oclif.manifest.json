@@ -1,1 +1,0 @@
-{"version":"0.0.0","commands":{"serve":{"id":"serve","description":"Serve the website locally and watch for changes","pluginName":"@sillabe/cli","pluginType":"core","aliases":[],"examples":[],"flags":{"help":{"name":"help","type":"boolean","char":"h","description":"show CLI help","allowNo":false},"port":{"name":"port","type":"option","char":"p","default":"8080"}},"args":[]}}}

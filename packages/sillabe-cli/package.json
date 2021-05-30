@@ -21,7 +21,8 @@
         "pretty-fix": "prettier --write 'src/**/*.{js,ts,tsx}'",
         "test": "jest --coverage",
         "compile": "tsc -b",
-        "build": "rm -rf lib && npm run compile && oclif-dev manifest"
+        "build": "rm -rf lib && npm run compile",
+        "release": "oclif-dev manifest"
     },
     "publishConfig": {
         "access": "public"
