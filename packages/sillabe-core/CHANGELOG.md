@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.3 (2021-05-30)
+
+
+### Bug Fixes
+
+* tests ([617e985](https://github.com/sillabe/sillabe/commit/617e985af4c7fc517dc6f05c5986cc829689a12e))
+
+
+
+
+
 ## 0.3.2 (2021-05-30)
 
 
