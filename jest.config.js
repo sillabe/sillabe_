@@ -5,9 +5,6 @@ module.exports = {
     testEnvironment: 'node',
     testMatch: ['**/*.(spec|test).ts'],
     moduleFileExtensions: ['ts', 'tsx', 'js'],
-    moduleNameMapper: {
-        '^lib/(.*)$': '<rootDir>/src/$1',
-    },
     coveragePathIgnorePatterns: ['/node_modules/', '/test/'],
     coverageThreshold: {
         global: {
