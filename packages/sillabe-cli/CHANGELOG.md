@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.2 (2021-05-30)
+
+
+### Bug Fixes
+
+* create manifest in postversion hook ([e80c1ae](https://github.com/sillabe/sillabe/commit/e80c1aeaefbdcd818e80effee78d3ca4554b5e83))
+
+
+
+
+
 ## 0.1.1 (2021-05-30)
 
 
