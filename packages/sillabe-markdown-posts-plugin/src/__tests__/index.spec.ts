@@ -1,11 +1,10 @@
 import { join } from 'path';
-import { MarkdownPosts } from '../MarkdownPosts';
-import { Node } from '../../../node/Node';
-import { Sillabe } from '../../../sillabe/Sillabe';
+import { Sillabe, Node } from '@sillabe/core';
+import MarkdownPostsPlugin from '../index';
 
 describe('MarkdownPosts', () => {
     const sillabe = Sillabe.createFromPath(join(__dirname, 'root'));
-    const plugin = new MarkdownPosts();
+    const plugin = new MarkdownPostsPlugin();
     sillabe.getPluginHolder().addPlugin(plugin);
     const root = sillabe.get('/');
     const post = sillabe.get('/post');

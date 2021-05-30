@@ -7,23 +7,25 @@ import filter from 'unist-util-filter';
 import toml from '@iarna/toml';
 import yaml from 'yaml';
 import { Node as UnistNode } from 'unist';
-import { IPostEnhancerPlugin } from '../../extend/scope/IPostEnhancerPlugin';
-import { IAttachmentEnhancerPlugin } from '../../extend/scope/IAttachmentEnhancerPlugin';
-import { PluginScope } from '../../extend/scope/PluginScope';
-import { PropertyIsEqual } from '../../property/match/PropertyIsEqual';
-import { ValueMatchesRegex } from '../../property/match/ValueMatchesRegex';
-import { Property } from '../../property/Property';
-import { Node } from '../../node/Node';
-import { Url } from '../../url/Url';
-import { NodeEnhancement } from '../../extend/scope/NodeEnhancement';
-import { Post } from '../../node/Post';
+import {
+    IPostEnhancerPlugin,
+    IAttachmentEnhancerPlugin,
+    PluginScope,
+    PropertyIsEqual,
+    ValueMatchesRegex,
+    Property,
+    Node,
+    Url,
+    NodeEnhancement,
+    Post,
+} from '@sillabe/core';
 
 export enum Formats {
     TOML = 'toml',
     YAML = 'yaml',
 }
 
-export class MarkdownPosts implements IPostEnhancerPlugin, IAttachmentEnhancerPlugin {
+export class MarkdownPostsPlugin implements IPostEnhancerPlugin, IAttachmentEnhancerPlugin {
     private contentAttachmentUrls: Url[] = [];
 
     constructor(private readonly supportedFormats: Formats[] = [Formats.TOML, Formats.YAML]) {}
@@ -122,3 +124,5 @@ export class MarkdownPosts implements IPostEnhancerPlugin, IAttachmentEnhancerPl
         return currentEnhancement;
     }
 }
+
+export default MarkdownPostsPlugin;

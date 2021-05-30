@@ -16,7 +16,6 @@ export * from './extend/PluginHolder';
 export * from './extend/PluginsObject';
 
 export * from './extra/plugins/IdentitySegmentVoter';
-export * from './extra/plugins/MarkdownPosts';
 
 export * from './filesystem/Path';
 export * from './filesystem/PathValidator';

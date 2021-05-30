@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "composite": true,
         "moduleResolution": "node",
         "target": "es5",
         "module": "es2015",
@@ -17,14 +16,19 @@
         "emitDecoratorMetadata": true,
         "declarationDir": "dist/types",
         "outDir": "dist/lib",
-        "rootDir": "./src",
         "typeRoots": [
+            "./types",
             "node_modules/@types",
             "../../node_modules/@types"
         ],
         "strictNullChecks": true,
         "esModuleInterop": true
     },
+    "references": [
+        {
+            "path": "../sillabe-core"
+        }
+    ],
     "include": [
         "src"
     ]
