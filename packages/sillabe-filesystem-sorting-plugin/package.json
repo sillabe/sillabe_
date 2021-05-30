@@ -1,6 +1,6 @@
 {
     "name": "@sillabe/filesystem-sorting-plugin",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "main": "dist/lib/index.js",
     "typings": "dist/types/index.d.ts",
     "files": [
@@ -21,6 +21,6 @@
         "access": "public"
     },
     "dependencies": {
-        "@sillabe/core": "^0.2.3"
+        "@sillabe/core": "^0.2.4"
     }
 }
