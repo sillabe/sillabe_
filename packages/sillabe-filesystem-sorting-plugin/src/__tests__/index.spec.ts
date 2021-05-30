@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { Path, PathValidator, NodeProvider, PluginHolder, NodeFinder, Url } from '@sillabe/core';
-import FilesystemSortingPlugin from '../index';
+import { FilesystemSortingPlugin } from '../index';
 
 describe('filesystem-sorting-plugin', () => {
     const rootDirectory = new Path(join(__dirname, 'root'));

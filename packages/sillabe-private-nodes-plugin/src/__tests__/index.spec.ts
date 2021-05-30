@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { Path, PathValidator, NodeProvider, PluginHolder, NodeFinder, Url } from '@sillabe/core';
-import PrivateNodesPlugin from '../index';
+import { PrivateNodesPlugin } from '../index';
 
 describe('private-nodes-plugin', () => {
     const rootDirectory = new Path(join(__dirname, 'root'));

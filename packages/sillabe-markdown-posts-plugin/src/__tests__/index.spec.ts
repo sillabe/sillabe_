@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { Sillabe, Node } from '@sillabe/core';
-import MarkdownPostsPlugin from '../index';
+import { MarkdownPostsPlugin } from '../index';
 
 describe('MarkdownPosts', () => {
     const sillabe = Sillabe.createFromPath(join(__dirname, 'root'));
