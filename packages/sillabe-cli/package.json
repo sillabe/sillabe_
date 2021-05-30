@@ -22,7 +22,7 @@
         "test": "jest --coverage",
         "compile": "tsc -b",
         "build": "rm -rf lib && npm run compile",
-        "release": "oclif-dev manifest"
+        "postversion": "oclif-dev manifest"
     },
     "publishConfig": {
         "access": "public"
