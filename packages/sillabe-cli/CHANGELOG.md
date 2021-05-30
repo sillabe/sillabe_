@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.3 (2021-05-30)
+
+
+### Bug Fixes
+
+* add yaml ([edff16e](https://github.com/sillabe/sillabe/commit/edff16ea964156df818cd000b160a91f49e40b38))
+
+
+
+
+
 ## 0.1.2 (2021-05-30)
 
 
