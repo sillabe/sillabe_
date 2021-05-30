@@ -1,6 +1,6 @@
 import { IPostEnhancerPlugin, PluginScope, Post, PostEnhancement, Resolution, ResolutionState } from '@sillabe/core';
 
-class PrivateNodesPlugin implements IPostEnhancerPlugin {
+export class PrivateNodesPlugin implements IPostEnhancerPlugin {
     getId(): string {
         return '@sillabe/private-nodes';
     }
@@ -31,5 +31,3 @@ class PrivateNodesPlugin implements IPostEnhancerPlugin {
         return currentEnhancement;
     }
 }
-
-export default PrivateNodesPlugin;

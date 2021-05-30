@@ -3,13 +3,6 @@
     "version": "0.2.2",
     "typings": "dist/types/index.d.ts",
     "main": "dist/lib/index.js",
-    "oclif": {
-        "commands": "./dist/lib/commands",
-        "bin": "sillabe",
-        "plugins": [
-            "@oclif/plugin-help"
-        ]
-    },
     "bin": {
         "sillabe": "./bin/run"
     },
@@ -20,19 +13,17 @@
         "pretty": "prettier --check 'src/**/*.{js,ts,tsx}'",
         "pretty-fix": "prettier --write 'src/**/*.{js,ts,tsx}'",
         "test": "jest --coverage",
-        "compile": "tsc -b",
-        "build": "rm -rf dist && npm run compile",
-        "postversion": "oclif-dev manifest"
+        "build": "tsc --module commonjs",
+        "start": "yarn build -- --watch"
     },
     "publishConfig": {
         "access": "public"
     },
     "dependencies": {
-        "@oclif/command": "^1",
-        "@oclif/config": "^1",
-        "@oclif/plugin-help": "^3",
+        "@sillabe/cli": "0.2.1",
         "@sillabe/core": "latest",
         "browser-sync": "^2.26.14",
+        "commander": "^7.2.0",
         "consolidate": "^0.16.0",
         "express": "^4.17.1",
         "fs-extra": "^10.0.0",
@@ -42,12 +33,9 @@
     },
     "files": [
         "/bin",
-        "/dist",
-        "/npm-shrinkwrap.json",
-        "/oclif.manifest.json"
+        "/dist"
     ],
     "devDependencies": {
-        "@oclif/dev-cli": "^1",
         "@types/consolidate": "^0.14.0",
         "@types/express": "^4.17.12",
         "@types/fs-extra": "^9.0.11",

@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
-require('@oclif/command').run()
-.then(require('@oclif/command/flush'))
-.catch(require('@oclif/errors/handle'))
+const path = require('path');
+const packageJson = require(path.join(__dirname, '..', 'package.json'));
+const program = require(path.join(__dirname, '..', 'dist', 'lib', 'index')).default(packageJson.version);
+
+program.parse();

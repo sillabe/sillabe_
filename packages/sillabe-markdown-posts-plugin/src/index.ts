@@ -124,5 +124,3 @@ export class MarkdownPostsPlugin implements IPostEnhancerPlugin, IAttachmentEnha
         return currentEnhancement;
     }
 }
-
-export default MarkdownPostsPlugin;

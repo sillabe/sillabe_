@@ -1,6 +1,6 @@
 import { ISegmentVoterPlugin, PluginScope, Segment } from '@sillabe/core';
 
-class FilesystemSortingPlugin implements ISegmentVoterPlugin {
+export class FilesystemSortingPlugin implements ISegmentVoterPlugin {
     getId(): string {
         return '@sillabe/filesystem-sorting';
     }
@@ -20,5 +20,3 @@ class FilesystemSortingPlugin implements ISegmentVoterPlugin {
         return new Segment(matches[1]);
     }
 }
-
-export default FilesystemSortingPlugin;
