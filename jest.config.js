@@ -5,7 +5,9 @@ module.exports = {
     testEnvironment: 'node',
     testMatch: ['**/*.(spec|test).ts'],
     moduleFileExtensions: ['ts', 'tsx', 'js'],
-    coveragePathIgnorePatterns: ['/node_modules/', '/test/'],
+    modulePathIgnorePatterns: ['lib', 'dist'],
+    transformIgnorePatterns: ['^.+\\.js$', '^.+\\.json$'],
+    coveragePathIgnorePatterns: ['/node_modules/', '/test/', '/lib/', '/dist/'],
     coverageThreshold: {
         global: {
             branches: 85,
@@ -14,7 +16,7 @@ module.exports = {
             statements: 95,
         },
     },
-    collectCoverageFrom: ['src/**/{!(index),}.{js,ts}'],
+    collectCoverageFrom: ['src/**/{!(index),}.{ts}'],
     globals: {
         'ts-jest': {
             tsconfig: 'tsconfig.json',
