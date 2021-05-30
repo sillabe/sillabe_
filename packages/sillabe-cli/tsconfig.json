@@ -3,7 +3,7 @@
         "moduleResolution": "node",
         "declaration": true,
         "importHelpers": true,
-        "module": "commonjs",
+        "module": "CommonJS",
         "outDir": "dist/lib",
         "declarationDir": "dist/types",
         "rootDir": "src",
@@ -13,7 +13,8 @@
         "typeRoots": [
             "node_modules/@types",
             "../../node_modules/@types"
-        ]
+        ],
+        "resolveJsonModule": true
     },
     "include": [
         "src/**/*"
