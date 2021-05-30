@@ -1,0 +1,54 @@
+{
+    "name": "@sillabe/cli",
+    "version": "0.0.0",
+    "typings": "dist/types/index.d.ts",
+    "main": "lib/index.js",
+    "oclif": {
+        "commands": "./lib/commands",
+        "bin": "sillabe",
+        "plugins": [
+            "@oclif/plugin-help"
+        ]
+    },
+    "bin": {
+        "sillabe": "./bin/run"
+    },
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint 'src/**/*.{js,ts,tsx}' --max-warnings=0",
+        "lint-fix": "eslint 'src/**/*.{js,ts,tsx}' --fix",
+        "pretty": "prettier --check 'src/**/*.{js,ts,tsx}'",
+        "pretty-fix": "prettier --write 'src/**/*.{js,ts,tsx}'",
+        "test": "jest --coverage",
+        "compile": "tsc -b",
+        "build": "rm -rf lib && npm run compile && oclif-dev manifest"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@oclif/command": "^1",
+        "@oclif/config": "^1",
+        "@oclif/plugin-help": "^3",
+        "@sillabe/core": "^0.1.1",
+        "browser-sync": "^2.26.14",
+        "consolidate": "^0.16.0",
+        "express": "^4.17.1",
+        "fs-extra": "^10.0.0",
+        "tslib": "^1",
+        "zod": "^3.1.0"
+    },
+    "files": [
+        "/bin",
+        "/lib",
+        "/npm-shrinkwrap.json",
+        "/oclif.manifest.json"
+    ],
+    "devDependencies": {
+        "@oclif/dev-cli": "^1",
+        "@types/consolidate": "^0.14.0",
+        "@types/express": "^4.17.12",
+        "@types/fs-extra": "^9.0.11",
+        "@types/jest": "^23.3.2"
+    }
+}

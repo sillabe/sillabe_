@@ -1,8 +1,7 @@
 {
     "name": "@sillabe/core",
     "version": "0.1.1",
-    "main": "dist/sillabe.cjs.js",
-    "module": "dist/sillabe.es5.js",
+    "main": "dist/lib/index.js",
     "typings": "dist/types/index.d.ts",
     "files": [
         "dist"
@@ -10,8 +9,8 @@
     "license": "MIT",
     "scripts": {
         "prebuild": "rimraf dist",
-        "build": "tsc --module commonjs && rollup -c rollup.config.ts",
-        "start": "rollup -c rollup.config.ts -w",
+        "build": "tsc --module commonjs",
+        "start": "yarn build -- --watch",
         "lint": "eslint 'src/**/*.{js,ts,tsx}' --max-warnings=0",
         "lint-fix": "eslint 'src/**/*.{js,ts,tsx}' --fix",
         "pretty": "prettier --check 'src/**/*.{js,ts,tsx}'",
@@ -30,7 +29,6 @@
         "remark-html": "^12.0.0",
         "remark-parse": "^8.0.3",
         "remark-stringify": "^8.1.1",
-        "rollup": "^2.49.0",
         "tsyringe": "^4.5.0",
         "unified": "^8.4.2",
         "unist-util-filter": "^2.0.3"

@@ -40,7 +40,9 @@ jobs:
       - run: |
           git config --global user.name "${COMMITTER_NAME}"
           git config --global user.email "${COMMITTER_EMAIL}"
-      - run: npm whoami
+      - run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: yarn config set workspaces-experimental true
       - run: yarn install
       - run: yarn build
