@@ -1,6 +1,6 @@
 {
     "name": "@sillabe/cli",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "typings": "dist/types/index.d.ts",
     "main": "dist/lib/index.js",
     "oclif": {
