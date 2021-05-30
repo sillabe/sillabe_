@@ -2,7 +2,7 @@ import { ISegmentVoterPlugin, PluginScope, Segment } from '@sillabe/core';
 
 class FilesystemSortingPlugin implements ISegmentVoterPlugin {
     getId(): string {
-        return 'filesystem-sorting';
+        return '@sillabe/filesystem-sorting';
     }
 
     hasScope(scope: PluginScope): boolean {

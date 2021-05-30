@@ -1,17 +1,15 @@
-import { IAttachmentEnhancerPlugin } from '../../extend/scope/IAttachmentEnhancerPlugin';
-import { ResolutionState } from '../../finder/resolution/ResolutionState';
-import { PluginScope } from '../../extend/scope/PluginScope';
-import { IPostEnhancerPlugin } from '../../extend/scope/IPostEnhancerPlugin';
-import { Resolution } from '../../finder/resolution/Resolution';
-import { NodeEnhancement } from '../../extend/scope/NodeEnhancement';
-import { Node } from '../../node/Node';
+import { IPostEnhancerPlugin, PluginScope, Post, PostEnhancement, Resolution, ResolutionState } from '@sillabe/core';
 
-export class PrivateNodes implements IAttachmentEnhancerPlugin, IPostEnhancerPlugin {
+class PrivateNodesPlugin implements IPostEnhancerPlugin {
+    getId(): string {
+        return '@sillabe/private-nodes';
+    }
+
     hasScope(scope: PluginScope): boolean {
         return [PluginScope.AttachmentEnhancerPlugin, PluginScope.PostEnhancerPlugin].includes(scope);
     }
 
-    enhance(node: Node, currentEnhancement: NodeEnhancement): NodeEnhancement {
+    enhance(node: Post, currentEnhancement: PostEnhancement): PostEnhancement {
         if (currentEnhancement.resolve().getState() !== ResolutionState.Found) {
             return currentEnhancement;
         }
@@ -32,8 +30,6 @@ export class PrivateNodes implements IAttachmentEnhancerPlugin, IPostEnhancerPlu
 
         return currentEnhancement;
     }
-
-    getId(): string {
-        return 'private-nodes';
-    }
 }
+
+export default PrivateNodesPlugin;

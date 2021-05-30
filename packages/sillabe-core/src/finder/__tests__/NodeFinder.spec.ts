@@ -2,7 +2,6 @@ import { join } from 'path';
 import { PathValidator } from '../../filesystem/PathValidator';
 import { NodeProvider } from '../../node/NodeProvider';
 import { NodeFinder } from '../NodeFinder';
-import { PrivateNodes } from '../../extra/plugins/PrivateNodes';
 import { Segment } from '../../url/Segment';
 import { PluginHolder } from '../../extend/PluginHolder';
 import { PluginScope } from '../../extend/scope/PluginScope';
@@ -57,7 +56,6 @@ describe('NodeFinder', () => {
 
     pluginHolder.addPlugin(new ExamplePlugin());
     pluginHolder.addPlugin(new IdentitySegmentVoter());
-    pluginHolder.addPlugin(new PrivateNodes());
 
     it('should find the root post', () => {
         expect(nodeFinder.findRootPost()?.getPath()).toEqual(rootDirectory);
@@ -191,23 +189,5 @@ describe('NodeFinder', () => {
 
         expect(attachment !== null).toBeTruthy();
         expect(deepAttachment !== null).toBeTruthy();
-    });
-
-    it('should hide private nodes', () => {
-        const privateAttachment = nodeFinder.findAttachmentAtUrl(new Url('/folderWithFile/_privateFile.txt'));
-        const privateDeepAttachment = nodeFinder.findAttachmentAtUrl(
-            new Url('/folderWithFile/__privatePath/unreachable.txt'),
-        );
-        const privatePost = nodeFinder.findPostAtUrl(new Url('/folderWithFile/__privatePath'));
-        const otherPrivatePost = nodeFinder.findPostAtUrl(new Url('/folderWithFile/_privatePathWithReachableChild'));
-        const publicAttachmentInPrivatePost = nodeFinder.findAttachmentAtUrl(
-            new Url('/folderWithFile/_privatePathWithReachableChild/reachable.txt'),
-        );
-
-        expect(privateAttachment).toBeNull();
-        expect(privateDeepAttachment).toBeNull();
-        expect(privatePost).toBeNull();
-        expect(otherPrivatePost).toBeNull();
-        expect(publicAttachmentInPrivatePost !== null).toBeTruthy();
     });
 });

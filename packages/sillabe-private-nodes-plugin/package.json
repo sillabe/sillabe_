@@ -1,6 +1,6 @@
 {
-    "name": "@sillabe/filesystem-sorting-plugin",
-    "version": "0.0.1",
+    "name": "@sillabe/private-nodes-plugin",
+    "version": "0.0.0",
     "main": "dist/lib/index.js",
     "typings": "dist/types/index.d.ts",
     "files": [

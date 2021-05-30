@@ -4,7 +4,7 @@ import { IPlugin } from '../IPlugin';
 import { Post } from '../../node/Post';
 
 export interface IPostEnhancerPlugin extends IPlugin {
-    enhance(attachment: Post, currentEnhancement: PostEnhancement): PostEnhancement;
+    enhance(node: Post, currentEnhancement: PostEnhancement): PostEnhancement;
 }
 
 export const isPostEnhancerPlugin = (object: IPlugin): object is IPostEnhancerPlugin => {
