@@ -1,0 +1,26 @@
+{
+    "name": "@sillabe/filesystem-sorting-plugin",
+    "version": "0.0.0",
+    "main": "dist/lib/index.js",
+    "typings": "dist/types/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "license": "MIT",
+    "scripts": {
+        "prebuild": "rimraf dist",
+        "build": "tsc --module commonjs",
+        "start": "yarn build -- --watch",
+        "lint": "eslint 'src/**/*.{js,ts,tsx}' --max-warnings=0",
+        "lint-fix": "eslint 'src/**/*.{js,ts,tsx}' --fix",
+        "pretty": "prettier --check 'src/**/*.{js,ts,tsx}'",
+        "pretty-fix": "prettier --write 'src/**/*.{js,ts,tsx}'",
+        "test": "jest --coverage"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@sillabe/core": "^0.2.3"
+    }
+}

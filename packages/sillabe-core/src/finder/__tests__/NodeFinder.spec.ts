@@ -4,7 +4,6 @@ import { NodeProvider } from '../../node/NodeProvider';
 import { NodeFinder } from '../NodeFinder';
 import { PrivateNodes } from '../../extra/plugins/PrivateNodes';
 import { Segment } from '../../url/Segment';
-import { NumberedSegmentVoter } from '../../extra/plugins/NumberedSegmentVoter';
 import { PluginHolder } from '../../extend/PluginHolder';
 import { PluginScope } from '../../extend/scope/PluginScope';
 import { IDynamicNodePlugin } from '../../extend/scope/IDynamicNodePlugin';
@@ -58,7 +57,6 @@ describe('NodeFinder', () => {
 
     pluginHolder.addPlugin(new ExamplePlugin());
     pluginHolder.addPlugin(new IdentitySegmentVoter());
-    pluginHolder.addPlugin(new NumberedSegmentVoter());
     pluginHolder.addPlugin(new PrivateNodes());
 
     it('should find the root post', () => {
@@ -193,14 +191,6 @@ describe('NodeFinder', () => {
 
         expect(attachment !== null).toBeTruthy();
         expect(deepAttachment !== null).toBeTruthy();
-    });
-
-    it('should ignore numbers in the beginning of the folder name', () => {
-        const post = nodeFinder.findPostAtUrl(new Url('/folderWithFile/folderWithNumber'));
-
-        expect(post !== null).toBeTruthy();
-        expect(post?.getUrl().getUrl()).toBe('/folderWithFile/folderWithNumber');
-        expect(post?.getPath().getPath()).toBe(join(__dirname, 'root/folderWithFile/1. folderWithNumber'));
     });
 
     it('should hide private nodes', () => {

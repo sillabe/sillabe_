@@ -17,7 +17,6 @@ export * from './extend/PluginsObject';
 
 export * from './extra/plugins/IdentitySegmentVoter';
 export * from './extra/plugins/MarkdownPosts';
-export * from './extra/plugins/NumberedSegmentVoter';
 export * from './extra/plugins/PrivateNodes';
 
 export * from './filesystem/Path';

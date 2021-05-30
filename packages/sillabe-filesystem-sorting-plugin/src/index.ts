@@ -1,10 +1,8 @@
-import { ISegmentVoterPlugin } from '../../extend/scope/ISegmentVoterPlugin';
-import { PluginScope } from '../../extend/scope/PluginScope';
-import { Segment } from '../../url/Segment';
+import { ISegmentVoterPlugin, PluginScope, Segment } from '@sillabe/core';
 
-export class NumberedSegmentVoter implements ISegmentVoterPlugin {
+class FilesystemSortingPlugin implements ISegmentVoterPlugin {
     getId(): string {
-        return 'numbered-segment-voter';
+        return 'filesystem-sorting';
     }
 
     hasScope(scope: PluginScope): boolean {
@@ -22,3 +20,5 @@ export class NumberedSegmentVoter implements ISegmentVoterPlugin {
         return new Segment(matches[1]);
     }
 }
+
+export default FilesystemSortingPlugin;
