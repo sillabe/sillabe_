@@ -1,6 +1,6 @@
 {
     "name": "@sillabe/cli",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "typings": "dist/types/index.d.ts",
     "main": "lib/index.js",
     "oclif": {
@@ -30,7 +30,7 @@
         "@oclif/command": "^1",
         "@oclif/config": "^1",
         "@oclif/plugin-help": "^3",
-        "@sillabe/core": "^0.1.1",
+        "@sillabe/core": "^0.2.0",
         "browser-sync": "^2.26.14",
         "consolidate": "^0.16.0",
         "express": "^4.17.1",
