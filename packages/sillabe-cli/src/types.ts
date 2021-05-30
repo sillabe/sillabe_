@@ -5,7 +5,7 @@ export const ConfigurationSchema = z.object({
     build: z.string().nonempty(),
     views: z.string().nonempty(),
     templateEngine: z.string().nonempty(),
-    plugins: z.string().array(),
+    plugins: z.any().array(),
 });
 
 export type Configuration = z.infer<typeof ConfigurationSchema>;

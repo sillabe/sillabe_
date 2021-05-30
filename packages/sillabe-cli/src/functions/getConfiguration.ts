@@ -11,6 +11,8 @@ export const getConfiguration = (absolutePath: string): Configuration => {
 
     accessSync(configPath, constants.R_OK);
 
+    console.log(configPath);
+
     const configuration = require(configPath);
     const result = ConfigurationSchema.safeParse(configuration);
 

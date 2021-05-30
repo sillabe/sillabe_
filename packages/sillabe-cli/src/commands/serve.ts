@@ -1,10 +1,9 @@
-import { join } from 'path';
 import { Command, flags } from '@oclif/command';
-import { Sillabe } from '@sillabe/core';
 import { getConfiguration } from '../functions/getConfiguration';
 import { validateConfiguration } from '../functions/validateConfiguration';
 import { createServer } from '../functions/createServer';
 import { routeServer } from '../functions/routeServer';
+import { getSillabe } from '../functions/getSillabe';
 
 export default class Serve extends Command {
     static description = 'Serve the website locally and watch for changes';
@@ -22,7 +21,7 @@ export default class Serve extends Command {
 
         validateConfiguration(root, configuration);
 
-        const sillabe = Sillabe.createFromPath(join(root, configuration.content));
+        const sillabe = getSillabe(root, configuration);
         const server = createServer(root, configuration);
 
         routeServer(server, sillabe, flags.port);

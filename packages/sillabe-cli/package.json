@@ -4,7 +4,7 @@
     "typings": "dist/types/index.d.ts",
     "main": "dist/lib/index.js",
     "oclif": {
-        "commands": "./lib/commands",
+        "commands": "./dist/lib/commands",
         "bin": "sillabe",
         "plugins": [
             "@oclif/plugin-help"
@@ -21,7 +21,7 @@
         "pretty-fix": "prettier --write 'src/**/*.{js,ts,tsx}'",
         "test": "jest --coverage",
         "compile": "tsc -b",
-        "build": "rm -rf lib && npm run compile",
+        "build": "rm -rf dist && npm run compile",
         "postversion": "oclif-dev manifest"
     },
     "publishConfig": {
@@ -42,7 +42,7 @@
     },
     "files": [
         "/bin",
-        "/lib",
+        "/dist",
         "/npm-shrinkwrap.json",
         "/oclif.manifest.json"
     ],
