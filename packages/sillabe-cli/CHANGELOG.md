@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/sillabe/sillabe/compare/@sillabe/cli@0.3.0...@sillabe/cli@0.4.0) (2021-05-31)
+
+
+### Features
+
+* add @sillabe/create-site ([910ce7e](https://github.com/sillabe/sillabe/commit/910ce7e57dd9d6a3d549e2f85fbd1356583dabbe))
+
+
+
+
+
 # [0.3.0](https://github.com/sillabe/sillabe/compare/@sillabe/cli@0.2.6...@sillabe/cli@0.3.0) (2021-05-31)
 
 
