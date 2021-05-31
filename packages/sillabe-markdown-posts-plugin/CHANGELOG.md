@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/sillabe/sillabe/compare/@sillabe/markdown-posts-plugin@0.1.6...@sillabe/markdown-posts-plugin@0.1.7) (2021-05-31)
+
+
+### Bug Fixes
+
+* add reflect-metadata dependencies ([7eedd35](https://github.com/sillabe/sillabe/commit/7eedd35979d75f54eb48e933eb56516aa84ea250))
+
+
+
+
+
 ## 0.1.6 (2021-05-31)
 
 
