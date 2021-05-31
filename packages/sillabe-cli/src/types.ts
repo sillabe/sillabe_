@@ -20,6 +20,5 @@ export const ConfigurationSchema = z.object({
     plugins: z.any().array(),
 });
 
-type InferredConfiguration = z.infer<typeof ConfigurationSchema>;
+export type Configuration = z.infer<typeof ConfigurationSchema>;
 export type TemplateEngine = keyof typeof supportedTemplateEngines;
-export type Configuration = Omit<InferredConfiguration, 'templateEngine'> & { templateEngine: TemplateEngine };

@@ -2,11 +2,11 @@ import { join } from 'path';
 import express from 'express';
 import consolidate from 'consolidate';
 import { Node, Sillabe } from '@sillabe/core';
-import { supportedTemplateEngines, Configuration } from '../types';
+import { supportedTemplateEngines, Configuration, TemplateEngine } from '../types';
 
 export const routeServer = (sillabe: Sillabe, port: string, root: string, configuration: Configuration) => {
     const server = express();
-    const engineExtension = supportedTemplateEngines[configuration.templateEngine];
+    const engineExtension = supportedTemplateEngines[configuration.templateEngine as TemplateEngine];
 
     server.use(express.static(join(root, configuration.public)));
     server.engine(engineExtension, consolidate[configuration.templateEngine as keyof typeof consolidate] as any);
