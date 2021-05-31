@@ -52,7 +52,7 @@ export abstract class PropertyHolder implements PropertyHolder {
         return this.match(new PropertyPassesTest(callback));
     }
 
-    getProperty<T = any>(name: string, defaultValue: T = null as any): Property {
+    getProperty<T = any>(name: string, defaultValue: T = null as any): Property<T> {
         if (this.propertyExists(name)) {
             return this.properties[name];
         }
@@ -76,8 +76,8 @@ export abstract class PropertyHolder implements PropertyHolder {
         delete this.properties[name];
     }
 
-    prop<T = any>(name: string, defaultValue: T = null as any): T {
-        return this.getProperty(name, defaultValue).getValue();
+    prop<T = any>(name: string, defaultValue: T = null as any): Property<T> {
+        return this.getProperty(name, defaultValue);
     }
 
     abstract getProtectedNames(): string[];

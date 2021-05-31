@@ -15,6 +15,10 @@ export class Property<T = any> {
         return this.name === property.getName() && Property.valueEquals(this.value, property.getValue());
     }
 
+    toString(): string {
+        return String(this.getValue());
+    }
+
     static valueEquals(left: any, right: any) {
         return equal(left, right);
     }

@@ -19,4 +19,9 @@ describe('Property', () => {
     it('should support values of any type', () => {
         expect(typeof integerProperty.getValue()).toBe('number');
     });
+
+    it('should render a string', () => {
+        expect(String(property)).toBe('value');
+        expect(String(integerProperty)).toBe('10');
+    });
 });
