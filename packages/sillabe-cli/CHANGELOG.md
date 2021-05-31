@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/sillabe/sillabe/compare/@sillabe/cli@0.2.6...@sillabe/cli@0.3.0) (2021-05-31)
+
+
+### Features
+
+* add cli create command ([d9d7fb1](https://github.com/sillabe/sillabe/commit/d9d7fb137d7b1fa446436a635a7cdc15f67acf08))
+
+
+
+
+
 ## 0.2.6 (2021-05-31)
 
 
