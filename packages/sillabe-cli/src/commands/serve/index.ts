@@ -3,7 +3,6 @@ import { getConfiguration } from '../../functions/getConfiguration';
 import { getSillabe } from '../../functions/getSillabe';
 import { routeServer } from '../../functions/routeServer';
 import { validateConfiguration } from '../../functions/validateConfiguration';
-import { createServer } from '../../functions/createServer';
 
 export const installServeCommand = () => {
     program
@@ -18,8 +17,7 @@ export const installServeCommand = () => {
             validateConfiguration(root, configuration);
 
             const sillabe = getSillabe(root, configuration);
-            const server = createServer(root, configuration);
 
-            routeServer(server, sillabe, port);
+            routeServer(sillabe, port, root, configuration);
         });
 };
