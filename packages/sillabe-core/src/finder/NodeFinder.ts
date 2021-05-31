@@ -43,7 +43,7 @@ export class NodeFinder {
             const enhancement = this.enhancePost(child);
             const state = enhancement.resolve().getState();
 
-            return [ResolutionState.Found, ResolutionState.NotFoundSelf].includes(state);
+            return [ResolutionState.Found].includes(state);
         });
 
         return new PostList(allChildren);
