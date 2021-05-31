@@ -36,14 +36,16 @@ export class NodeFinder {
         return this.findPostAtUrl(new Url('/')) as Post;
     }
 
-    findPostsAt(post: Post): PostList {
+    findPostsAt(post: Post, includeSelfNotFound: boolean = false): PostList {
         const realChildren = this.findRealPostsAt(post);
         const dynamicChildren = this.findDynamicPostsAt(post);
         const allChildren = [...realChildren, ...dynamicChildren].filter((child) => {
             const enhancement = this.enhancePost(child);
             const state = enhancement.resolve().getState();
 
-            return [ResolutionState.Found].includes(state);
+            return [ResolutionState.Found, ...(includeSelfNotFound ? [ResolutionState.NotFoundSelf] : [])].includes(
+                state,
+            );
         });
 
         return new PostList(allChildren);
@@ -147,7 +149,7 @@ export class NodeFinder {
                 return null;
             }
 
-            const children = parent.getChildren();
+            const children = this.findPostsAt(parent, true);
             const attachments = parent.getAttachments();
             const nodes = [...children.toArray(), ...attachments.toArray()];
             node = nodes.find((node) => {
