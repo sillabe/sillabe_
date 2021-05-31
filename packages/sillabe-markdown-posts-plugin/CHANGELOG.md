@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.5 (2021-05-31)
+
+
+### Bug Fixes
+
+* NotFoundSelf should exclude children ([eee746e](https://github.com/sillabe/sillabe/commit/eee746e2dc237b8a27aa935bda39e4ae42a4e1fb))
+
+
+
+
+
 ## 0.1.4 (2021-05-31)
 
 
