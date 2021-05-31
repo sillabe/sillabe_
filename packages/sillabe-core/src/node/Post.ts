@@ -63,6 +63,10 @@ export class Post extends Node implements Post {
         return this.nodeFinder.findPostAtUrl(this.getUrl().removeLastSegment());
     }
 
+    get parent(): Post | null {
+        return this.getParent();
+    }
+
     isRoot(): boolean {
         const rootPost = this.nodeFinder.findRootPost();
 

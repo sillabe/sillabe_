@@ -84,7 +84,9 @@ describe('NodeFinder', () => {
 
         expect(nodeFinder.findPostAtUrl(new Url('/'))).toEqual(rootPost);
         expect(rootPost?.getParent()).toBeNull();
+        expect(rootPost?.parent).toBeNull();
         expect(child?.getParent()?.is(rootPost)).toBeTruthy();
+        expect(child?.parent?.is(rootPost)).toBeTruthy();
         expect(rootPost?.isParentOf(child)).toBeTruthy();
         expect(rootPost?.isParentOf(rootPost)).toBeFalsy();
         expect(rootPost?.isChildOf(child)).toBeFalsy();
