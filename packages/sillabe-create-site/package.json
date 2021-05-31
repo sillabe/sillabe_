@@ -1,0 +1,15 @@
+{
+    "name": "@sillabe/create-site",
+    "version": "0.0.0",
+    "files": [
+        "index.js"
+    ],
+    "license": "MIT",
+    "bin": "./index.js",
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@sillabe/cli": "^0.2.6"
+    }
+}

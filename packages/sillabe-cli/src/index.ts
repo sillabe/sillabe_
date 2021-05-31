@@ -12,3 +12,5 @@ const getProgram = (version: string) => {
 };
 
 export default getProgram;
+
+export { createAction } from './commands/create/createAction';
