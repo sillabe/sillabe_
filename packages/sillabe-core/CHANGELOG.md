@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.6 (2021-05-31)
+
+
+### Bug Fixes
+
+* use findPostsAt directly ([5dc7d38](https://github.com/sillabe/sillabe/commit/5dc7d3835d8626afcba13b8658c31ccee92f1f52))
+
+
+
+
+
 ## 0.3.5 (2021-05-31)
 
 
