@@ -24,6 +24,7 @@
         "@iarna/toml": "^2.2.5",
         "deep-equal": "^2.0.5",
         "jexl": "^2.3.0",
+        "reflect-metadata": "^0.1.13",
         "tsyringe": "^4.5.0"
     },
     "devDependencies": {

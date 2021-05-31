@@ -5,7 +5,9 @@
         "index.js"
     ],
     "license": "MIT",
-    "bin": "./index.js",
+    "bin": {
+        "create-sillabe-site": "./index.js"
+    },
     "publishConfig": {
         "access": "public"
     },
