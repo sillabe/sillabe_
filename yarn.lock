@@ -1658,18 +1658,20 @@
     yaml "^1.10.2"
     zod "^3.1.0"
 
-"@sillabe/cli@^0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@sillabe/cli/-/cli-0.2.6.tgz#60a5ba13e1f046613b55ed34d5c2a8f1f186552d"
-  integrity sha512-NpcB7MJqD3vOAxCt1Wn7llX46Q5TGn43/8yGxy1DWNMG+OqCG0z8LvZNVvGiewzU63m0aH6YTgFquOUa5z/7GA==
+"@sillabe/cli@latest":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@sillabe/cli/-/cli-0.4.0.tgz#84a9ecf6239b2adddb2ec093c2b12d6fbf490d33"
+  integrity sha512-4fO7VVCyVxluW+CHb584BPB4HZEI58HB1FkppaLHNHZHcFwKwxybDnfewcTsYiXBPGDlySV+qxxwYX/hI6WJEw==
   dependencies:
     "@sillabe/cli" "0.2.1"
     "@sillabe/core" latest
     browser-sync "^2.26.14"
     commander "^7.2.0"
     consolidate "^0.16.0"
+    degit "^2.8.4"
     express "^4.17.1"
     fs-extra "^10.0.0"
+    inquirer "^8.1.0"
     tslib "^1"
     yaml "^1.10.2"
     zod "^3.1.0"
