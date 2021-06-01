@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/sillabe/sillabe/compare/@sillabe/create-site@0.1.1...@sillabe/create-site@0.1.2) (2021-06-01)
+
+
+### Bug Fixes
+
+* create-site dependencies ([39c4bb0](https://github.com/sillabe/sillabe/commit/39c4bb0a8783130c05f3ff881e12c7d51649ef21))
+
+
+
+
+
 ## [0.1.1](https://github.com/sillabe/sillabe/compare/@sillabe/create-site@0.1.0...@sillabe/create-site@0.1.1) (2021-05-31)
 
 
