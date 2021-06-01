@@ -13,6 +13,6 @@
         "access": "public"
     },
     "dependencies": {
-        "@sillabe/cli": "latest"
+        "@sillabe/cli": "^0.4.0"
     }
 }
