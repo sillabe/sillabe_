@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/sillabe/sillabe/compare/@sillabe/cli@0.4.0...@sillabe/cli@0.4.1) (2021-06-01)
+
+
+### Bug Fixes
+
+* accept params ([1b2a9cf](https://github.com/sillabe/sillabe/commit/1b2a9cffbdf32bbc0f9c00e1d75b629228b44ca2))
+
+
+
+
+
 # [0.4.0](https://github.com/sillabe/sillabe/compare/@sillabe/cli@0.3.0...@sillabe/cli@0.4.0) (2021-05-31)
 
 

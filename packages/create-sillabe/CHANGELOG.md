@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2](https://github.com/sillabe/sillabe/compare/create-sillabe@0.0.1...create-sillabe@0.0.2) (2021-06-01)
+
+
+### Bug Fixes
+
+* accept params ([1b2a9cf](https://github.com/sillabe/sillabe/commit/1b2a9cffbdf32bbc0f9c00e1d75b629228b44ca2))
+
+
+
+
+
 ## 0.0.1 (2021-06-01)
 
 
