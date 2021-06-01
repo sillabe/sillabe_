@@ -25,7 +25,8 @@
         "deep-equal": "^2.0.5",
         "jexl": "^2.3.0",
         "reflect-metadata": "^0.1.13",
-        "tsyringe": "^4.5.0"
+        "tsyringe": "^4.5.0",
+        "mime-types": "^2.1.30"
     },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^19.0.0",
