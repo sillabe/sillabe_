@@ -1,6 +1,6 @@
 {
     "name": "@sillabe/core",
-    "version": "0.3.8",
+    "version": "0.3.9",
     "main": "dist/lib/index.js",
     "typings": "dist/types/index.d.ts",
     "files": [

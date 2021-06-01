@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.9](https://github.com/sillabe/sillabe/compare/@sillabe/core@0.3.8...@sillabe/core@0.3.9) (2021-06-01)
+
+
+### Bug Fixes
+
+* yarn.lock ([f881a6a](https://github.com/sillabe/sillabe/commit/f881a6a4b1e953526b7ec5209db69c4d195be4fd))
+
+
+
+
+
 ## [0.3.8](https://github.com/sillabe/sillabe/compare/@sillabe/core@0.3.7...@sillabe/core@0.3.8) (2021-06-01)
 
 
