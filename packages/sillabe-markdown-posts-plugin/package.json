@@ -20,13 +20,16 @@
     "publishConfig": {
         "access": "public"
     },
+    "devDependencies": {
+        "@types/dompurify": "^2.2.2",
+        "@types/markdown-it": "^12.0.1"
+    },
     "dependencies": {
+        "@iarna/toml": "^2.2.5",
         "@sillabe/core": "latest",
-        "remark-frontmatter": "^2.0.0",
-        "remark-html": "^12.0.0",
-        "remark-parse": "^8.0.3",
-        "remark-stringify": "^8.1.1",
-        "unified": "^8.4.2",
-        "unist-util-filter": "^2.0.3"
+        "@types/sanitize-html": "^2.3.1",
+        "gray-matter": "^4.0.3",
+        "markdown-it": "^12.0.6",
+        "sanitize-html": "^2.4.0"
     }
 }

@@ -17,7 +17,7 @@ describe('MarkdownPosts', () => {
     it('should handle files with frontmatter', () => {
         expect(root?.getProperty('title', '').getValue()).toBe('Some title');
         expect(root?.getProperty('date', null).getValue()).toEqual(new Date('2020-01-25'));
-        expect(root?.getProperty('markdown', '').getValue()).toBe('Some markdown _content_.');
+        expect(root?.getProperty('markdown-source', '').getValue()).toBe('Some markdown *content*.\n');
         expect(root?.getProperty('post', {}).getValue()).toEqual({
             category: 'blog',
             published: false,
@@ -31,6 +31,6 @@ describe('MarkdownPosts', () => {
 
     it('should handle files without frontmatter', () => {
         expect(post?.getProperty('title', '').getValue()).toBe('');
-        expect(post?.getProperty('markdown', '').getValue()).toBe('Normal _contents_.');
+        expect(post?.getProperty('markdown-source', '').getValue()).toBe('Normal *contents*.\n');
     });
 });
