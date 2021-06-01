@@ -1,13 +1,13 @@
 {
-    "name": "@sillabe/create-site",
-    "version": "0.1.4",
+    "name": "create-sillabe",
+    "version": "0.0.0",
     "main": "index.js",
     "files": [
         "index.js"
     ],
     "license": "MIT",
     "bin": {
-        "create-sillabe-site": "./index.js"
+        "create-sillabe": "./index.js"
     },
     "publishConfig": {
         "access": "public"
