@@ -13,4 +13,4 @@ const getProgram = (version: string) => {
 
 export default getProgram;
 
-export { createAction } from './commands/create/createAction';
+export { installOptions } from './commands/create/createCommand';
