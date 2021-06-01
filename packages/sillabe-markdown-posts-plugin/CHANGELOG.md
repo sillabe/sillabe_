@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/sillabe/sillabe/compare/@sillabe/markdown-posts-plugin@0.1.7...@sillabe/markdown-posts-plugin@0.1.8) (2021-06-01)
+
+
+### Bug Fixes
+
+* change markdown libs ([cc766ca](https://github.com/sillabe/sillabe/commit/cc766caf49bc44b94a298c2b81a219c47ab3020a))
+* remove unused lib ([bbf0ab6](https://github.com/sillabe/sillabe/commit/bbf0ab6db20285d1205c2eebdf666e3106034407))
+
+
+
+
+
 ## [0.1.7](https://github.com/sillabe/sillabe/compare/@sillabe/markdown-posts-plugin@0.1.6...@sillabe/markdown-posts-plugin@0.1.7) (2021-05-31)
 
 
